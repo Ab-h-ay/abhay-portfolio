@@ -90,7 +90,7 @@ export const Hero = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex gap-6 justify-center text-accent-cyan"
+          className="flex gap-6 justify-center text-accent-cyan mb-20 md:mb-12"
         >
           <motion.a
             href="mailto:gaikwadabhay869@gmail.com"
@@ -137,7 +137,7 @@ export const Hero = () => {
 
       {/* Terminal cursor animation */}
       <motion.div
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
       >
         <div className="bg-dark-secondary border border-accent-cyan/40 rounded-lg p-4 font-mono text-sm w-64 md:w-80">
           <div className="text-accent-cyan mb-2">
