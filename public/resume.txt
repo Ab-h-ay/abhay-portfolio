@@ -1,0 +1,45 @@
+ABHAY GOKUL GAIKWAD
+DevOps Engineer
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 1+ years of experience in GCP and AWS, specializing in GKE (Kubernetes),
+CI/CD pipelines, Infrastructure as Code using Terraform, and observability with Prometheus and
+Grafana. Skilled in building scalable cloud-native applications and automating deployments with
+strong focus on reliability, security and performance.
+
+PROFESSIONAL EXPERIENCE
+TRIARQ HEALTH LLP, Nashik, Maharashtra - DevOps Engineer (July 2025 - Ongoing)
+• Built and optimised CI/CD pipelines (CloudBuild, GitHub Actions, Jenkins), reducing deployment time by 30%
+• Deployed and managed containerised microservices on GKE (Kubernetes) with HPA and zero-downtime.
+• Automated infrastructure using Terraform (Infrastructure as Code), improving consistency across environments.
+• Implemented observability stack (Prometheus, Grafana, Cloud Monitoring) with custom dashboards and alerting, cutting MTTD by 20%.
+• Integrated security tools (Mend SAST, Wiz, On-Demand Scan) for vulnerability scanning and compliance.
+• Built and maintained hardened Docker images, implementing minimal base images, vulnerability patching, and secure configurations.
+
+DIPROMA INFOTECH, Nashik, Maharashtra - Cloud Computing Intern (March 2023 - April 2023)
+• Designed and deployed cloud based application on AWS (EC2, RDS, Auto Scaling), architecture solutions for high availability and scalability.
+• Collaborated with cross-functional teams to implement and optimise cloud infrastructure, improving system reliability and resource efficiency.
+
+EDUCATION
+Bachelor of Engineering, Computer Engineering
+MET Bhujbhal Knowledge City, Nashik, Maharashtra
+2020 - 2024 | CGPA: 8.28
+
+TECHNICAL SKILLS
+Cloud & Infrastructure: GCP (GKE, Compute Engine, Cloud Build, Artifact Registry, Cloud Armor, IAM, Pub/Sub, Cloud SQL), AWS (EC2, RDS, Auto Scaling), Terraform
+CI/CD & Containers: CloudBuild, GitHub Actions, Jenkins, Git, Docker, Kubernetes (GKE), GitOps
+Security: Mend SAST, On-Demand Scanning, Cloud Endpoints, GCP Security Command Center, RBAC
+Monitoring & Logging: GCP Monitoring, Cloud Logging, Prometheus, Grafana
+Scripting & Programming: Python, Linux, Bash, Shell Scripting, YAML
+
+CERTIFICATIONS
+• AWS Cloud Computing Training - Ethans Tech, Pune
+• DevOps Training - Ethans Tech, Pune
+• Linux Administration Training - SevenMentors, Pune
+• CCNA Training - SevenMentors, Pune
+
+CONTACT
+Email: gaikwadabhay869@gmail.com
+Phone: +91 8483857098
+LinkedIn: linkedin.com/in/gaikwad-abhay
+Location: Nashik, Maharashtra, India

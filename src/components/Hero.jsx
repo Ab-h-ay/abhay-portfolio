@@ -73,7 +73,7 @@ export const Hero = () => {
         >
           <a
             href="/resume.pdf"
-            download
+            download="Abhay_Gaikwad_Resume.pdf"
             className="btn-primary px-8 py-3 rounded-lg font-semibold text-white flex items-center justify-center gap-2 cursor-pointer"
           >
             <Download size={20} />
