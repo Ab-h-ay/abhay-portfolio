@@ -171,8 +171,17 @@ export const Hero = () => {
       </motion.div>
 
       {/* Terminal cursor animation */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center w-full px-4">
-        <div className="bg-dark-secondary border border-accent-cyan/40 rounded-lg p-4 font-mono text-sm mx-auto w-full max-w-xs md:max-w-md">
+      <motion.div
+        className="absolute bottom-24 left-1/2 transform -translate-x-1/2 flex flex-col items-center w-full px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, delay: 1.0 }}
+      >
+        <motion.div
+          className="bg-dark-secondary border border-accent-cyan/40 rounded-lg p-4 font-mono text-sm mx-auto w-full max-w-xs md:max-w-md"
+          animate={{ boxShadow: ['0 0 0px rgba(34,211,238,0)', '0 0 16px rgba(34,211,238,0.4)', '0 0 0px rgba(34,211,238,0)'] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+        >
           <div className="text-accent-cyan mb-2 break-words">
             <span className="text-accent-purple">$</span> {typedLines[0]}
             {currentLine === 0 && showCursor ? <span className="inline-block h-5 w-1 bg-accent-cyan ml-1 align-bottom" /> : null}
@@ -181,7 +190,7 @@ export const Hero = () => {
             <span className="text-accent-green">{typedLines[1]}</span>
             {currentLine === 1 && showCursor ? <span className="inline-block h-5 w-1 bg-accent-cyan ml-1 align-bottom" /> : null}
           </div>
-        </div>
+        </motion.div>
         <motion.p
           className="text-xs text-accent-cyan/60 mt-4 font-semibold tracking-widest"
           animate={{ opacity: [0.5, 1, 0.5] }}
@@ -189,7 +198,7 @@ export const Hero = () => {
         >
           SCROLL TO DEPLOY
         </motion.p>
-      </div>
+      </motion.div>
     </section>
   );
 };
