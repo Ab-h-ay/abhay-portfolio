@@ -20,7 +20,7 @@ export const Projects = () => {
       },
       image: '✈️',
       category: 'Cloud Infrastructure',
-      github: '#',
+      github: 'https://github.com/Ab-h-ay/Galactic-Airline.git',
       demo: '#',
     },
     {

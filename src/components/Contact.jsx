@@ -27,8 +27,8 @@ export const Contact = () => {
     {
       icon: Github,
       title: 'GitHub',
-      value: 'github.com/gaikwad-abhay',
-      link: 'https://github.com',
+      value: 'Ab-h-ay',
+      link: 'https://github.com/Ab-h-ay',
       color: 'text-accent-blue',
     },
     {

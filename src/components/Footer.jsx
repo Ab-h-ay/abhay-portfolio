@@ -7,7 +7,7 @@ export const Footer = () => {
   const socials = [
     { icon: Mail, link: 'mailto:gaikwadabhay869@gmail.com', label: 'Email' },
     { icon: Linkedin, link: 'https://linkedin.com/in/gaikwad-abhay', label: 'LinkedIn' },
-    { icon: Github, link: 'https://github.com', label: 'GitHub' },
+    { icon: Github, link: 'https://github.com/Ab-h-ay', label: 'GitHub' },
   ];
 
   return (

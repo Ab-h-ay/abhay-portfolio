@@ -122,7 +122,7 @@ export const Hero = () => {
             <Linkedin size={24} />
           </motion.a>
           <motion.a
-            href="https://github.com"
+            href="https://github.com/Ab-h-ay"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.2 }}
