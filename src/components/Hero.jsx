@@ -37,7 +37,15 @@ export const Hero = () => {
   }, []);
 
   useEffect(() => {
-    if (currentLine >= commands.length) return;
+    if (currentLine >= commands.length) {
+      // Pause at the end, then reset to loop
+      const resetTimeout = setTimeout(() => {
+        setTypedLines(['', '']);
+        setCurrentLine(0);
+        setCurrentChar(0);
+      }, 2500);
+      return () => clearTimeout(resetTimeout);
+    }
 
     const timeout = setTimeout(() => {
       setTypedLines((prev) => {
@@ -52,7 +60,7 @@ export const Hero = () => {
         setCurrentLine((prev) => prev + 1);
         setCurrentChar(0);
       }
-    }, 80);
+    }, 140);
 
     return () => clearTimeout(timeout);
   }, [currentChar, currentLine]);
