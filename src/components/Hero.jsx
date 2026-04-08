@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Phone, Download, ArrowRight } from 'lucide-react';
 
@@ -22,6 +23,40 @@ export const Hero = () => {
     },
   };
 
+  const commands = ['./deploy', '▶ Deployment pipeline'];
+  const [typedLines, setTypedLines] = useState(['', '']);
+  const [currentLine, setCurrentLine] = useState(0);
+  const [currentChar, setCurrentChar] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor((prev) => !prev);
+    }, 500);
+    return () => clearInterval(cursorInterval);
+  }, []);
+
+  useEffect(() => {
+    if (currentLine >= commands.length) return;
+
+    const timeout = setTimeout(() => {
+      setTypedLines((prev) => {
+        const next = [...prev];
+        next[currentLine] += commands[currentLine][currentChar] || '';
+        return next;
+      });
+
+      if (currentChar < commands[currentLine].length - 1) {
+        setCurrentChar((prev) => prev + 1);
+      } else {
+        setCurrentLine((prev) => prev + 1);
+        setCurrentChar(0);
+      }
+    }, 80);
+
+    return () => clearTimeout(timeout);
+  }, [currentChar, currentLine]);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient circles */}
@@ -45,7 +80,7 @@ export const Hero = () => {
       </div>
 
       <motion.div
-        className="relative z-10 max-w-4xl mx-auto px-4 text-center"
+        className="relative z-10 max-w-4xl mx-auto px-4 text-center pb-48 md:pb-40"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -90,7 +125,7 @@ export const Hero = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex gap-6 justify-center text-accent-cyan mb-20 md:mb-12"
+          className="flex gap-6 justify-center text-accent-cyan mb-8"
         >
           <motion.a
             href="mailto:gaikwadabhay869@gmail.com"
@@ -136,20 +171,15 @@ export const Hero = () => {
       </motion.div>
 
       {/* Terminal cursor animation */}
-      <motion.div
-        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-      >
-        <div className="bg-dark-secondary border border-accent-cyan/40 rounded-lg p-4 font-mono text-sm w-64 md:w-80">
-          <div className="text-accent-cyan mb-2">
-            <span className="text-accent-purple">$</span> ./deploy
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center w-full px-4">
+        <div className="bg-dark-secondary border border-accent-cyan/40 rounded-lg p-4 font-mono text-sm mx-auto w-full max-w-xs md:max-w-md">
+          <div className="text-accent-cyan mb-2 break-words">
+            <span className="text-accent-purple">$</span> {typedLines[0]}
+            {currentLine === 0 && showCursor ? <span className="inline-block h-5 w-1 bg-accent-cyan ml-1 align-bottom" /> : null}
           </div>
-          <div className="flex items-center gap-1 min-h-6">
-            <span className="text-accent-green">▶ Deployment pipeline</span>
-            <motion.div
-              className="w-2 h-5 bg-accent-cyan"
-              animate={{ opacity: [1, 0] }}
-              transition={{ duration: 0.7, repeat: Infinity }}
-            />
+          <div className="min-h-6 break-words">
+            <span className="text-accent-green">{typedLines[1]}</span>
+            {currentLine === 1 && showCursor ? <span className="inline-block h-5 w-1 bg-accent-cyan ml-1 align-bottom" /> : null}
           </div>
         </div>
         <motion.p
@@ -159,7 +189,7 @@ export const Hero = () => {
         >
           SCROLL TO DEPLOY
         </motion.p>
-      </motion.div>
+      </div>
     </section>
   );
 };
